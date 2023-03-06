@@ -1,3 +1,4 @@
+'''
 # 1) escribe un programa que muestre en pantalal "Hello World" #
 print("Hello World")
 
@@ -85,8 +86,37 @@ for divisor in range(1, numero+1):
     if numero % divisor == 0:
         print(divisor)    
 
+# 11) Escribir un programa que nos diga si un número dado es primo
+def es_primo(num):
+    if num <= 1:
+        return False  # Los números menores o iguales a 1 no son primos
+    elif num == 2:
+        return True  # 2 es un número primo
+    else:
+        # Verificamos si num es divisible por algún número menor que él mismo
+        for i in range(2, num):
+            if num % i == 0:
+                return False
+        return True
 
+# 12) Pide una nota. Muestra la calificación según la nota: 0-3 (muy deficiente), 3-5 (insuficiente), 5-6
+# (suficiente), 6-7 (bien), 7-9 (notable), 10 (sobresaliente)
 
+nota = float(input("Introduce la nota: "))
+if nota >= 0 and nota <= 3:
+    print("Muy deficiente")
+else:
+    if nota >= 4 and nota <=5:
+        print("Insuficiente")
+    if nota >= 6 and nota <= 7:
+        print("Suficiente")
+    if nota >= 8 and nota <= 9:
+        print("Notable")
+    if nota == 10:
+        print("Sobresaliente")
+
+        
+'''
 
 
 
